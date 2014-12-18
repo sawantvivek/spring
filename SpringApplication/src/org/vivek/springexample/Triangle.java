@@ -6,6 +6,7 @@ public class Triangle {
 	private Point pointB;
 	private Point pointC;
 
+	//test class for beans
 	public Point getPointA() {
 		return pointA;
 	}
