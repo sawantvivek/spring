@@ -11,7 +11,7 @@ public class ShapeApp {
 	public static void main(String[] args) {
 		context = new ClassPathXmlApplicationContext("spring.xml");
 		context.refresh();
-		Shape shape = (Shape) context.getBean("Shape");
+		Shape shape = (Shape) context.getBean("Circle");
 		shape.draw();
 	}
 
