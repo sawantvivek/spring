@@ -7,11 +7,16 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
 
 
-	<bean id="Triangle" class="org.vivek.springexample.Triangle">
+	<bean id="Shape" class="org.vivek.springexample.Triangle">
 		<property name="pointA" ref="pointA" />
 		<property name="pointB" ref="pointB" />
 		<property name="pointC" ref="pointC" />
 	</bean>
+
+	<bean id="Circle" class="org.vivek.springexample.Circle">
+		<property name="center" ref="pointA" />
+	</bean>
+
 
 	<bean id="pointA" class="org.vivek.springexample.Point">
 		<property name="x" value="${pointForA.X}" />

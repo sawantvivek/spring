@@ -3,7 +3,7 @@ package org.vivek.springexample;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
-public class Triangle implements InitializingBean, DisposableBean{
+public class Triangle implements InitializingBean, DisposableBean, Shape{
 
 	private Point pointA;
 	private Point pointB;
@@ -34,7 +34,8 @@ public class Triangle implements InitializingBean, DisposableBean{
 		this.pointC = pointC;
 	}
 
-	public void drawShape() {
+	public void draw() {
+		System.out.println("Draw method of Triangle");
 		System.out.println("Point A coordinates are X = "+ getPointA().getX()+" and  Y = "+ getPointA().getY());
 		System.out.println("Point B coordinates are X = "+ getPointB().getX()+" and  Y = "+ getPointB().getY());
 		System.out.println("Point c coordinates are X = "+ getPointC().getX()+" and  Y = "+ getPointC().getY());
