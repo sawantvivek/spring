@@ -7,17 +7,12 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
 
 
-	<bean id="Triangle" class="org.vivek.springexample.Triangle" name="Triangle-name" autowire="byName">
-		<!-- <property name="shape" value="VivekTriangleShape" /> -->
-		<!-- <constructor-arg index="0" type="java.lang.String" value="Equilateral"/> -->
-		<!-- <constructor-arg type="java.lang.Integer" value="10"/> -->
-		<!-- <property name="points">
-			<list>
-				<ref bean="zeroPoint" />
-				<ref bean="PointA" />
-				<ref bean="PointB" />
-			</list>
-		</property> -->
+	<bean id="Triangle" class="org.vivek.springexample.Triangle"
+		autowire="byName">
+		<property name="pointA" ref="pointA" />
+		<property name="pointB" ref="pointB" />
+		<property name="pointC" ref="pointC" />
+
 
 	</bean>
 
@@ -36,6 +31,8 @@
 		<property name="x" value="0" />
 		<property name="y" value="20" />
 	</bean>
+
+	<bean class="org.vivek.springexample.MyBeanFactoryPP" />
 
 	<alias name="Triangle" alias="Triangle-Alias" />
 
